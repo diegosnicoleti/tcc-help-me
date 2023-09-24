@@ -7,6 +7,9 @@ import ChronicPain from './chronicPain.svg';
 import Discrimination from './discrimination.svg';
 import Stress from './stress.svg';
 
+import CommonQuestions from './commonQuestions.svg';
+import QuotationMarks from './quotationMarks.svg';
+
 const subjectsPsychology = [
   {
     illustration: Anxiety,
@@ -24,7 +27,31 @@ const subjectsPsychology = [
     illustration: Stress,
     subjectName: 'Stress'
   }
-]
+];
+
+const reviewsAboutPsychologists = [
+  {
+    comment: 'Eu amei a consulta com a Luana Foi minha segunda experiência com psicóloga e a agora eu me senti muito acolhida. Muito certeira nas coisas que me falou.',
+    noteToPsychologist: 4,
+    name: 'Fulano da Silva',
+    psychologistName: 'Luciana Sobrenome',
+    dateAndTime: '12/12/2012 - 12:00'
+  },
+  {
+    comment: 'Eu amei a consulta com a Luana Foi minha segunda experiência com psicóloga e a agora eu me senti muito acolhida. Muito certeira nas coisas que me falou.',
+    noteToPsychologist: 5,
+    name: 'Fulano da Silva',
+    psychologistName: 'Luciana Sobrenome',
+    dateAndTime: '12/12/2012 - 12:00'
+  },
+  {
+    comment: 'Eu amei a consulta com a Luana Foi minha segunda experiência com psicóloga e a agora eu me senti muito acolhida. Muito certeira nas coisas que me falou.',
+    noteToPsychologist: 4,
+    name: 'Fulano da Silva',
+    psychologistName: 'Luciana Sobrenome',
+    dateAndTime: '12/12/2012 - 12:00'
+  }
+];
 
 export default function View(){
   return (
@@ -114,28 +141,117 @@ export default function View(){
         </div>
       </section>
 
-      <section className='bg-gray-100'>
-        <div className='mx-auto max-w-screen-lg px-4'>
-          <p className='text-center text-3xl font-bold text-gray-800'>Mitos e Verdades</p>
-          <p className='mt-10 text-center text-gray-800'>
-            Segundo a Universidade Federal de Minas Gerais <strong>(UFMG)</strong> há alguns mitos e verdades quando o assunto é Saúde Mental
-          </p>
-          <p className='mt-2 text-center text-gray-800'>
-            A seguir, será exibido algumas frases sobre o tema. Selecione se você acha que é <strong>Mito</strong> ou <strong>Verdade</strong>
-          </p>
-        </div>
-      </section>
-
       <section className='bg-primary-100'>
         <div className='mx-auto max-w-screen-lg px-4'>
           <p className='text-center text-3xl font-bold text-gray-800'>
             Brasil é o país com mais ansiosos no mundo
           </p>
+
           <div>
             <p className='mt-10 text-center text-gray-800'>
               Aproximadamente 9,3% dos brasileiros sofrem de ansiedade patológica, segundo OMS
             </p>
             <p className='text-center text-gray-800'>Organização Mundial da Saúde</p>
+          </div>
+
+          <div className='flex mt-10'>
+            <div className='bg-white py-4 px-3 rounded-2xl text-center h-full'>
+              <p>Mas o que é ansiedade patológica afinal?</p>
+              <p>
+                A ansiedade patológica segundo a psiquiatra Dra Luciana Mendes 
+                se deve pelas preocupações excessivas, irritabilidade e 
+                pertubações do sono, por exemplo.
+              </p>
+              <p>
+                Os principais motivos que levam a essa ansiedade constumam ser:
+                Preocupações de saúde, financeiras e relacionamentos.
+              </p>
+            </div>
+            <div className='bg-white py-4 px-3 rounded-2xl h-full mt-40'>
+              <p className='italic text-center'>
+                "Quando não tratada corretamente, a ansiedade pode virar uma 
+                adversidade e desencadear outros transtornos mentais, 
+                como a depressão, que acomete aproximadamente 
+                300 milhões de pessoas no mundo, segundo a 
+                Organização Pan-Americana da Saúde (Opas)."
+              </p>
+              <p className='text-right'>
+                g1.globo.com
+              </p>
+            </div>
+          </div>
+
+          <div className='flex mt-10'>
+            <div className='bg-white py-4 px-3 rounded-2xl text-center h-full font-semibold'>
+              <p>
+                Crianças e jovens são mais vulneráveis a ter o diagnóstico 
+                de transtorno de ansiedade.
+              </p>
+            </div>
+            <div className='bg-white py-4 px-3 rounded-2xl mt-40'>
+              <p className='text-center'>
+                "A ansiedade é mais comum na infância e adolescência, 
+                porque a pessoa ainda não conhece o mundo. 
+                É uma fase que o ser humano ainda está em desenvolvimento 
+                e a criança está extremamente vulnerável ao que acontece."
+              </p>
+              <p className='text-right'>
+                Gerardo Maria de Araújo Filho, professor da Famerp.
+              </p>
+            </div>
+          </div>
+
+          <div className='text-start'>
+            <button className='text-sm mt-4 bg-primary-700 hover:bg-primary-800 text-black font-bold	py-2 px-4 rounded-lg'>
+              Saiba mais
+            </button>
+          </div> 
+        </div>
+      </section>
+
+      <section className='bg-CommonQuestions-100'>
+        <div className='mx-auto max-w-screen-lg px-4'>
+          <p className='text-center text-3xl font-bold text-gray-800'>
+            Perguntas frequentes
+          </p>
+          <div className='flex mt-20'>
+            <div>
+              <img src={CommonQuestions} alt="" width={500}/>
+            </div>
+            <div>
+              array de perguntas + botao p/ adicionar uma pergunta
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className='bg-FeedBacks-100'>
+        <div className='mx-auto max-w-screen-lg px-4'>
+          <div>
+            <p className='text-center text-3xl font-bold text-gray-800'>
+              O que as pessoas têm a dizer sobre os atendimentos?
+            </p>
+            <p className='text-center font-bold text-gray-800 mt-5'>
+              Confira os últimos comentários dos nossos usuários sobre os psicólogos do Help Me
+            </p>
+          </div>
+          
+          <div className='flex mt-5'>
+            {reviewsAboutPsychologists.map((item:{comment:string, noteToPsychologist:number, name:string, psychologistName:string, dateAndTime:string}) => {
+              return (
+                <div className='bg-white shadow-md py-4 px-4 h-full rounded-3xl text-left font-bold text-gray-800 text-sm mr-5'>
+                  <img src={QuotationMarks} alt="" />
+                  {item.comment}
+                  <p>{item.name}</p>
+                  <p>Paciente da 
+                    <span className='text-primary-800'>
+                      {" " + item.psychologistName}
+                    </span>
+                  </p>
+                  <p className='text-gray-50'>{item.dateAndTime}</p>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>

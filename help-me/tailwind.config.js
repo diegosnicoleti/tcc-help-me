@@ -25,7 +25,16 @@ export default {
         },
         gray: {
           800: "#3A4448",
-          100: "#FCFCFC"
+          700: "#586266",
+          600: "#6D6B6B",
+          100: "#FCFCFC",
+          50: "#CEDBE1"
+        },
+        CommonQuestions: {
+          100: "#FBFBFB"
+        },
+        FeedBacks: {
+          100: "#FFF4EA"
         }
       }
     },
