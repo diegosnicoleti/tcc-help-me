@@ -14,7 +14,9 @@ export default {
           800: "#FF725E",
           700: "#FFCACA",
           600: "#FFF4F4",
-          100: "#FFF0F0"
+          500: "#FC8686",
+          100: "#FFF0F0",
+          50: "#FFF5F5"
         },
         purple: {
           800: "#1D1F44",
@@ -35,6 +37,9 @@ export default {
         },
         FeedBacks: {
           100: "#FFF4EA"
+        },
+        blue: {
+          600: "#008EC7"
         }
       }
     },
