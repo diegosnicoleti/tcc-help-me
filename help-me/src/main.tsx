@@ -6,7 +6,7 @@ import './styles/index.css';
 // import ListOfPsychologists from './pages/listOfPsychologists';
 // import UserRegistration from './pages/userRegistration';
 // import UserLogin from './pages/userLogin';
-import PsychologistLogin from './pages/psychologistLogin';
+// import PsychologistLogin from './pages/psychologistLogin';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -14,6 +14,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     {/* <ListOfPsychologists /> */}
     {/* <UserRegistration /> */}
     {/* <UserLogin /> */}
-    <PsychologistLogin />
+    {/* <PsychologistLogin /> */}
   </React.StrictMode>,
 )
