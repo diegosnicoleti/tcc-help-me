@@ -11,6 +11,7 @@ export default {
       },
       colors: {
         primary: {
+          900: "#fa5f48",
           800: "#FF725E",
           700: "#FFCACA",
           600: "#FFF4F4",
@@ -26,10 +27,13 @@ export default {
           400: "#F4FCFF"
         },
         gray: {
+          1000: "#455A64",
+          900: "#263238",
           800: "#3A4448",
           700: "#586266",
           600: "#6D6B6B",
           100: "#FCFCFC",
+          60: "#E8E8E8",
           50: "#CEDBE1"
         },
         CommonQuestions: {

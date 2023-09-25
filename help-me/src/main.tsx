@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './styles/index.css';
 
 // import Home from './pages/home/index.tsx';
-import ListOfPsychologists from './pages/listOfPsychologists';
+// import ListOfPsychologists from './pages/listOfPsychologists';
+// import UserRegistration from './pages/userRegistration';
+// import UserLogin from './pages/userLogin';
+import PsychologistLogin from './pages/psychologistLogin';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     {/* <Home /> */}
-    <ListOfPsychologists />
+    {/* <ListOfPsychologists /> */}
+    {/* <UserRegistration /> */}
+    {/* <UserLogin /> */}
+    <PsychologistLogin />
   </React.StrictMode>,
 )
