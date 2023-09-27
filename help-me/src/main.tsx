@@ -7,6 +7,7 @@ import './styles/index.css';
 // import UserRegistration from './pages/userRegistration';
 // import UserLogin from './pages/userLogin';
 // import PsychologistLogin from './pages/psychologistLogin';
+import PsychologistRegistration from './pages/psychologistRegistration';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -15,5 +16,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     {/* <UserRegistration /> */}
     {/* <UserLogin /> */}
     {/* <PsychologistLogin /> */}
+    <PsychologistRegistration />
   </React.StrictMode>,
 )
