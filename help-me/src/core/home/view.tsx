@@ -114,9 +114,11 @@ export default function View(){
                 sua biografia e selecionar o que mais te agradar.
               </p>
               <div className='text-end'>
-                <button className='text-sm mt-4 bg-purple-500 hover:bg-purple-600 text-white font-bold	py-2 px-4 rounded-lg'>
-                  Conheça os psicólogos
-                </button>
+                <a href="list-of-psychologists">
+                  <button className='text-sm mt-4 bg-purple-500 hover:bg-purple-600 text-white font-bold	py-2 px-4 rounded-lg'>
+                    Conheça os psicólogos
+                  </button>
+                </a>
               </div>            
             </div>
           </div>
