@@ -17,7 +17,8 @@ export default {
           600: "#FFF4F4",
           500: "#FC8686",
           100: "#FFF0F0",
-          50: "#FFF5F5"
+          50: "#FFF5F5",
+          40: "#FFEBEB"
         },
         purple: {
           800: "#1D1F44",
@@ -35,7 +36,9 @@ export default {
           500: "#7F8F97",
           100: "#FCFCFC",
           60: "#E8E8E8",
-          50: "#CEDBE1"
+          50: "#CEDBE1",
+          40: "#F9F9F9",
+          30: "#E6E6E6"
         },
         CommonQuestions: {
           100: "#FBFBFB"
