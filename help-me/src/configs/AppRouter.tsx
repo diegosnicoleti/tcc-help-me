@@ -1,5 +1,6 @@
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
 
+import LayoutApp from '../components/LayoutApp/index.tsx';
 import Home from '../pages/home';
 import ListOfPsychologists from '../pages/listOfPsychologists';
 import UserRegistration from '../pages/userRegistration';
@@ -9,13 +10,16 @@ import PsychologistRegistration from '../pages/psychologistRegistration';
 import FullProfilePsychologist from '../pages/fullProfilePsychologist/index.tsx';
 import PsychologistAccessHome from '../pages/psychologistAccessHome/index.tsx';
 
-import AppLayout from '../components/Layout';
+import AppPsychologistLayout from '../components/LayoutPsychologist/index.tsx';
 
 export default function Router(){
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route element={<LayoutApp><Outlet/></LayoutApp>}>
+          <Route path='/' element={<Home/>}/>          
+        </Route>
+
         <Route path='list-of-psychologists' element={<ListOfPsychologists/>}/>
         <Route path='full-profile-psychologist' element={<FullProfilePsychologist/>}/>
 
@@ -24,7 +28,7 @@ export default function Router(){
         <Route path='psychologist-login' element={<PsychologistLogin/>}/>
         <Route path='psychologist-registration' element={<PsychologistRegistration/>}/>
 
-        <Route element={<AppLayout><Outlet/></AppLayout>}>
+        <Route element={<AppPsychologistLayout><Outlet/></AppPsychologistLayout>}>
           <Route path='psychologist-access-panel' element={<PsychologistAccessHome/>}/>          
         </Route>        
       </Routes>
