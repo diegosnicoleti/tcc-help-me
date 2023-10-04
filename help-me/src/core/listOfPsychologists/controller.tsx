@@ -5,7 +5,7 @@ import View from "./view";
 export default function Controller({mediator}:ControllerProps){
   
   const getPsychologists = useCallback(async () => {
-    const {data} = await mediator.getPsychologists()
+    const {data} = await mediator.getPsychologists();
   },[])
   
   useEffect(() => {
