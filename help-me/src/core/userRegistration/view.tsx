@@ -9,7 +9,7 @@ export default function View(props:ViewProps){
           <div className="bg-primary-800 rounded-lg">
             <div className="ml-16 mt-8 mb-8 mr-14">
               <p className="font-semibold text-white text-xl mb-5">Crie sua conta</p>
-              <input className="rounded-lg py-2 pl-5 mb-4 w-full block" type="text" placeholder="E-mail" value={props.email} onChange={props.handleChangeEmail}/>
+              <input className="rounded-lg py-2 pl-5 mb-4 w-full block" type="email" placeholder="E-mail" value={props.email} onChange={props.handleChangeEmail}/>
               <input className="rounded-lg py-2 pl-5 mb-4 w-full block" type="text" placeholder="Senha" value={props.password} onChange={props.handleChangePassword}/>
               <input className="rounded-lg py-2 pl-5 mb-4 w-full block" type="text" placeholder="Confirme a senha"/>
               <p className="text-center font-bold text-white max-w-xs text-sm mb-3">
@@ -26,7 +26,7 @@ export default function View(props:ViewProps){
             <img src={UserRegistration} alt="" />
           </div>
         </div>
-      </div>      
+      </div>
     </>
   )
 }

@@ -7,28 +7,23 @@ export default class Mediator {
     this.model = model;
   }
 
-//   {
-//     "email": "dddddd",
-//     "password": "123"
-// }
-
-  async postPsychologist(data:any){
+  async postPsychologist(rawData:{email:string, password:string}){
     try {
 
       const requestBody = {
-        "email": data.email,
-        "password": data.password
-      }
+        "email": rawData.email,
+        "password": rawData.password
+      };
 
-      const {status} = await this.model.postPsychologist(requestBody)
-
+      const status = await this.model.postPsychologist(requestBody);
+      
       return {status}
 
     }catch(error){
-      console.log(error)
+      console.log(error);
       return {
         status: 400
-      }
+      };
     }
   }
 }

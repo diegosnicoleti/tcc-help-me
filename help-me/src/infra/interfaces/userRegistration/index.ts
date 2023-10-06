@@ -1,9 +1,9 @@
 export interface Model {
-  postPsychologist: (data:any) => Promise<any>
+  postPsychologist: (data:{email:string, password:string}) => Promise<any>
 }
 
 export interface Mediator {
-  submit: (rawData:any) => Promise<{ status: number }>
+  postPsychologist: (rawData:{email:string, password:string}) => Promise<{status:number}>
 }
 
 export interface ViewProps {

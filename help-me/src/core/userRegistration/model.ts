@@ -1,5 +1,5 @@
 export default class Model {
-  public async postPsychologist(data:any) {
+  public async postPsychologist(data:{email:string, password:string}) {
     try {
       const response = await fetch('http://localhost:4000/new-psychologists', {
         method: 'POST',
