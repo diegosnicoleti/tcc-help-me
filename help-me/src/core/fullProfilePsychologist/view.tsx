@@ -2,6 +2,7 @@ import PhotoProfile from './photo.svg';
 import Payment from './payment.svg';
 import Duration from './duration.svg';
 import Public from './public.svg';
+// import test from '../../assets/photo.svg';
 
 export default function View(){
   return (
