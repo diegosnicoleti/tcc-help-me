@@ -13,7 +13,7 @@ export default class Mediator {
     try {
       const data = await this.model.getPsychologists();
       console.log(data)
-      return data;
+      return {data:data};
     } catch (error) {
       console.error('Erro ao buscar dados da API:', error);
       throw error;

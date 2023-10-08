@@ -85,13 +85,6 @@ export default function View(){
                 <p>Período: (2010 - 2015)</p>
               </div>
             </div>
-
-            <div className='flex'>
-              <div>
-                <p>seg</p>
-                <p>14 ago</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
