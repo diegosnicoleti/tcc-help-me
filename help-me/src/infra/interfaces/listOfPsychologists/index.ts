@@ -8,9 +8,16 @@ export interface Mediator {
 
 export interface ViewProps {
   statesList: string[]
+  citiesList: string[]
 
   specialtyList: string[]
   psychologistsList: PsychologistData[]
+
+  stateFilter: string
+
+  handleChangeUF: (newUF:string) => void
+
+  queryPsicoRedirect: (psicoCode:number) => void
 }
 
 export interface ControllerProps {

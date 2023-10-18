@@ -13,7 +13,9 @@ export default function View(props:ViewProps){
           <div className="flex mt-5">
             <div className="flex mr-8">
               <p className="text-gray-700 font-bold mr-2">UF:</p>
-              <select id="countries" className="bg-white h-30 border border-gray-600 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500">
+              <select 
+                onChange={({target}) => props.handleChangeUF(target.value)}
+                id="countries" className="bg-white h-30 border border-gray-600 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500">
                 {props.statesList.map((item:string, index:number) => {
                   return (
                     <option key={index} value={item}>{item}</option>
@@ -24,12 +26,13 @@ export default function View(props:ViewProps){
 
             <div className="flex mr-8">
               <p className="text-gray-700 font-bold mr-2">Cidade:</p>
-                <select id="countries" className="bg-white h-30 border border-gray-600 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500">
-                  <option selected>Choose a country</option>
-                  <option value="US">United States</option>
-                  <option value="CA">Canada</option>
-                  <option value="FR">France</option>
-                  <option value="DE">Germany</option>
+                <select
+                  id="countries" className="bg-white h-30 border border-gray-600 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500">
+                  {props.citiesList.map((item:string, index:number) => {
+                    return (
+                      <option key={index} value={item}>{item}</option>
+                    )
+                  })}
                 </select>
             </div>
 
@@ -81,7 +84,9 @@ export default function View(props:ViewProps){
                     <p className="text-gray-800 font-bold text-sm">
                       {item.biografia_resumo}
                     </p>
-                    <p className="mt-2 text-blue-600 font-bold text-sm">
+                    <p 
+                      onClick={() => props.queryPsicoRedirect(item.id_psicologo)}
+                      className="mt-2 text-blue-600 font-bold text-sm hover:cursor-pointer">
                       Ver perfil completo
                     </p>
                   </div>
