@@ -68,9 +68,9 @@ export default function View(props:ViewProps){
             </div>
           </div>
 
-          {props.psychologistsList.map((item:any) => {
+          {props.psychologistsList.map((item:any, index:number) => {
             return (
-              <div className="bg-primary-50 mb-10 mt-5 rounded-3xl shadow-md py-4">
+              <div className="bg-primary-50 mb-10 mt-5 rounded-3xl shadow-md py-4" key={index}>
                 <div className="flex ml-4">
                   {/* <div>
                     <img src={Photo} alt="" />
