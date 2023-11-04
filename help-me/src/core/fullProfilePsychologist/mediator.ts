@@ -10,8 +10,9 @@ export default class Mediator {
   async getPsychologistsById(id_psico:number) {
     try {
       const data = await this.model.getPsychologistsById(id_psico);
-      console.log(data)
-      return {data:data};
+      return {
+        data:data
+      };
     } catch (error) {
       console.error('Erro ao buscar dados da API:', error);
       throw error;

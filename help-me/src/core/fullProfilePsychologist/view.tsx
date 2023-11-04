@@ -2,9 +2,10 @@ import PhotoProfile from './photo.svg';
 import Payment from './payment.svg';
 import Duration from './duration.svg';
 import Public from './public.svg';
+import { ViewProps } from '../../infra/interfaces/fullProfilePsychologist';
 // import test from '../../assets/photo.svg';
 
-export default function View(){
+export default function View(props:ViewProps){
   return (
     <div>
       <section>
@@ -16,7 +17,7 @@ export default function View(){
 
             <div>
               <p>Psicólogo</p>
-              <h2 className="text-primary-800 font-bold text-2xl	">Fulano de Souza da Silva</h2>
+              <h2 className="text-primary-800 font-bold text-2xl">{props.fullName}</h2>
               <p>CRP 00/0000000</p>
 
               <div className="flex mt-5">
@@ -73,9 +74,7 @@ export default function View(){
 
               <p className="mt-5 font-bold">SOBRE MIM</p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. 
-                Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, 
-                ultrices mauris. Maecenas vitae mattis tellus. 
+                {props.biographySummary}
               </p>
 
               <p className="mt-5 font-bold">FORMAÇÃO ACADÊMICA</p>
