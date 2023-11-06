@@ -26,6 +26,8 @@ export default function Controller({mediator}:ControllerProps){
   const getPsychologists = useCallback(async () => {
     const {data} = await mediator.getPsychologists();
     
+    console.log(data)
+
     const states = data.map((item:any) => item.uf);
     const newStates = [...new Set(states)];
 

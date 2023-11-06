@@ -9,6 +9,16 @@ export interface Mediator {
 export interface ViewProps {
   fullName: string
   biographySummary: string
+  consultationFee: number
+  consultationDuration: number
+  clientType: string
+  CRPNumber: number
+  paymentType: string
+  base64String: string
+  contactLink: number
+  specialtyType: string
+  feedbackScore: number
+  feedbackComment: string
 }
 
 export interface ControllerProps {

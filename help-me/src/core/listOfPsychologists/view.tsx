@@ -1,5 +1,6 @@
+import { Base64ToImage } from '../../components/Base64ToImage';
 import { ViewProps } from '../../infra/interfaces/listOfPsychologists';
-// import Photo from './photo.svg';
+import Photo from './photo.svg';
 
 export default function View(props:ViewProps){
   return (
@@ -11,11 +12,11 @@ export default function View(props:ViewProps){
           </p>
 
           <div className="flex mt-5">
-            <div className="flex mr-8">
+            <div className="flex items-center mr-8">
               <p className="text-gray-700 font-bold mr-2">UF:</p>
               <select 
                 onChange={({target}) => props.handleChangeUF(target.value)}
-                id="countries" className="bg-white h-30 border border-gray-600 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500">
+                id="countries" className="h-8 bg-white h-30 border border-gray-600 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500">
                 {props.statesList.map((item:string, index:number) => {
                   return (
                     <option key={index} value={item}>{item}</option>
@@ -24,10 +25,10 @@ export default function View(props:ViewProps){
               </select>
             </div>
 
-            <div className="flex mr-8">
+            <div className="flex items-center mr-8">
               <p className="text-gray-700 font-bold mr-2">Cidade:</p>
                 <select
-                  id="countries" className="bg-white h-30 border border-gray-600 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500">
+                  id="countries" className="h-8 bg-white h-30 border border-gray-600 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500">
                   {props.citiesList.map((item:string, index:number) => {
                     return (
                       <option key={index} value={item}>{item}</option>
@@ -36,9 +37,9 @@ export default function View(props:ViewProps){
                 </select>
             </div>
 
-            <div className="flex mr-8">
+            <div className="flex items-center mr-8">
               <p className="text-gray-700 font-bold mr-2">Especialidade:</p>
-                <select id="countries" className="bg-white h-30 border border-gray-600 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500">
+                <select id="countries" className="h-8 bg-white h-30 border border-gray-600 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500">
                   {props.specialtyList.map((item:string, index:number) => {
                     return (
                       <option key={index} value={item}>{item}</option>
@@ -48,7 +49,7 @@ export default function View(props:ViewProps){
             </div>
 
             <div className="flex mr-8">
-              <div className="flex">
+              <div className="flex items-center">
                 <div>
                   <p className="text-gray-700 font-bold mr-2">Valor da consulta:</p>            
                 </div>
@@ -67,16 +68,15 @@ export default function View(props:ViewProps){
               </button>
             </div>
           </div>
-
           {props.psychologistsList.map((item:any, index:number) => {
             return (
               <div className="bg-primary-50 mb-10 mt-5 rounded-3xl shadow-md py-4" key={index}>
-                <div className="flex ml-4">
-                  {/* <div>
-                    <img src={Photo} alt="" />
-                    <p className='text-center text-gray-800 font-bold'>R$ {item.serviceValue}</p>
-                    <p className='text-center text-gray-800 font-bold text-xs'>{item.durationOfService} min</p>
-                  </div> */}
+                <div className="flex items-center justify-center ml-4">
+                  <div>
+                    <Base64ToImage base64String={item.foto} height={100} width={100}/>
+                    <p className='text-center text-primary-500 font-bold'>R$ {item.valor}</p>
+                    <p className='text-center text-gray-800 font-bold text-xs'>{item.duracao} min</p>
+                  </div>
                   <div className='ml-3'>
                     <p className="text-primary-500 font-bold text-base">{item.nome_completo}</p>
                     <p className="text-gray-800 font-bold text-sm">CRP: {item.crp}</p>

@@ -40,6 +40,10 @@ export default {
           40: "#F9F9F9",
           30: "#E6E6E6"
         },
+        success: {
+          800: "#057517",
+          50: "#9ae3a6"
+        },
         CommonQuestions: {
           100: "#FBFBFB"
         },

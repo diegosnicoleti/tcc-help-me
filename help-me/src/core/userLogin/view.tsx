@@ -14,6 +14,12 @@ export default function View(){
             <button className='text-sm bg-primary-800 hover:bg-primary-900 text-white font-bold	py-2.5 px-4 rounded-lg w-full'>
               ENTRAR
             </button>
+            <div className='flex text-sm mt-4'>
+              <p className='mr-2'>Não tem uma conta?</p>
+              <a href="user-registration">
+                <p className='font-bold text-primary-800 hover:text-primary-900 hover:cursor-pointer'>Registre-se</p>
+              </a>
+            </div>
           </div>
         </div>
       </div>

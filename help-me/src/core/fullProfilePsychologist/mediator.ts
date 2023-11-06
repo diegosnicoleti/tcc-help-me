@@ -10,6 +10,7 @@ export default class Mediator {
   async getPsychologistsById(id_psico:number) {
     try {
       const data = await this.model.getPsychologistsById(id_psico);
+      
       return {
         data:data
       };
