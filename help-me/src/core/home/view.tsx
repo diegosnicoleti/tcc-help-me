@@ -31,25 +31,22 @@ const subjectsPsychology = [
 
 const reviewsAboutPsychologists = [
   {
-    comment: 'Eu amei a consulta com a Luana Foi minha segunda experiência com psicóloga e a agora eu me senti muito acolhida. Muito certeira nas coisas que me falou.',
+    comment: 'Eu amei a consulta com a Priscila e me senti muito acolhida. Muito certeira nas coisas que me falou.',
     noteToPsychologist: 4,
-    name: 'Fulano da Silva',
-    psychologistName: 'Luciana Sobrenome',
-    dateAndTime: '12/12/2012 - 12:00'
+    psychologistName: 'Priscila Pagoto',
+    dateAndTime: '15/10/2023 - 13:45'
   },
   {
-    comment: 'Eu amei a consulta com a Luana Foi minha segunda experiência com psicóloga e a agora eu me senti muito acolhida. Muito certeira nas coisas que me falou.',
+    comment: 'Ótimo atendimento, muito atenciosa e simpática. Adorei a consulta.',
     noteToPsychologist: 5,
-    name: 'Fulano da Silva',
-    psychologistName: 'Luciana Sobrenome',
-    dateAndTime: '12/12/2012 - 12:00'
+    psychologistName: 'Mariana',
+    dateAndTime: '12/10/2023 - 14:23'
   },
   {
-    comment: 'Eu amei a consulta com a Luana Foi minha segunda experiência com psicóloga e a agora eu me senti muito acolhida. Muito certeira nas coisas que me falou.',
+    comment: 'Sinto que estou progredindo e aprendendo a lidar melhor com minhas questões emocionais graças ao apoio e orientação.',
     noteToPsychologist: 4,
-    name: 'Fulano da Silva',
-    psychologistName: 'Luciana Sobrenome',
-    dateAndTime: '12/12/2012 - 12:00'
+    psychologistName: 'Roberta Alves',
+    dateAndTime: '22/10/2023 - 12:17'
   }
 ];
 
@@ -239,13 +236,14 @@ export default function View(){
           </div>
           
           <div className='flex mt-5'>
-            {reviewsAboutPsychologists.map((item:{comment:string, noteToPsychologist:number, name:string, psychologistName:string, dateAndTime:string}) => {
+            {reviewsAboutPsychologists.map((item:{comment:string, noteToPsychologist:number, psychologistName:string, dateAndTime:string}) => {
               return (
                 <div className='bg-white shadow-md py-4 px-4 h-full rounded-3xl text-left font-bold text-gray-800 text-sm mr-5'>
                   <img src={QuotationMarks} alt="" />
-                  {item.comment}
-                  <p>{item.name}</p>
-                  <p>Paciente da 
+                  <p className='italic'>
+                    {item.comment}
+                  </p>
+                  <p className='mt-2'>Paciente da 
                     <span className='text-primary-800'>
                       {" " + item.psychologistName}
                     </span>

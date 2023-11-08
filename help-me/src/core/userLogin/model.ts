@@ -9,7 +9,7 @@ export default class Model {
         body: JSON.stringify(data),
       });
   
-      console.log('response: ', await response)
+      console.log('response: ', response)
 
       if (!response.ok) {
         throw new Error('Erro ao enviar dados para a API');
