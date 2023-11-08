@@ -1,7 +1,6 @@
 export default class Model {
   public async postVerifyUser(data:{email:string, password:string}){
     try{
-
       const response = await fetch('http://localhost:4000/verifyUser', {
         method: 'POST',
         headers: {
@@ -10,12 +9,12 @@ export default class Model {
         body: JSON.stringify(data),
       });
   
+      console.log('response: ', await response)
+
       if (!response.ok) {
         throw new Error('Erro ao enviar dados para a API');
       }
   
-      console.log('response: ', response)
-
     }catch(error){
       console.error('Erro ao enviar dados para a API:', error);
       throw error;

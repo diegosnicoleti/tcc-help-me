@@ -7,7 +7,7 @@ export interface Mediator {
 }
 
 export interface ViewProps {
-
+  handleLogin: () => void
 }
 
 export interface ControllerProps {
