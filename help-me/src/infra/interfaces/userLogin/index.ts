@@ -7,6 +7,11 @@ export interface Mediator {
 }
 
 export interface ViewProps {
+  emailField: string
+  passwordField: string
+
+  handleChangeEmailField: ({target}: React.ChangeEvent<HTMLInputElement>) => void
+  handleChangePasswordField: ({target}: React.ChangeEvent<HTMLInputElement>) => void
   handleLogin: () => void
 }
 

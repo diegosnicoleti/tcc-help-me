@@ -9,12 +9,12 @@ export default class Model {
         body: JSON.stringify(data),
       });
   
-      console.log('response: ', response)
-
       if (!response.ok) {
         throw new Error('Erro ao enviar dados para a API');
       }
-  
+
+      const result = await response.json();
+      return result.status;
     }catch(error){
       console.error('Erro ao enviar dados para a API:', error);
       throw error;
