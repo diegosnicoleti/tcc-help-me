@@ -16,6 +16,7 @@ export default class Model{
   }
 
   public async postPsychologistComment(data:{id_user:number, id_psico:number, comment:string}){
+    console.log('data: ', data)
     try{
       const response = await fetch('http://localhost:4000/PsychologistComment', {
         method: 'POST',

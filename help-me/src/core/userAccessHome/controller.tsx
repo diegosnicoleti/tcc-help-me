@@ -32,12 +32,14 @@ export default function Controller({mediator}:ControllerProps){
 
   const closeRatingModal = () => setShowRatingModal(false);
 
-  const handleConfirmComment = () => {
+  const handleConfirmComment = async() => {
     const rawData = {
       id_user: 1,
-      id_psico: idPsychologistSelected,
-      comment: comment
+      id_psico: 2,
+      comment: 'comentario diego teste'
     };
+
+    const {status} = await mediator.postPsychologistComment(rawData);
 
   };
 
